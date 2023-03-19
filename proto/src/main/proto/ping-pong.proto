@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package epam;
+
+option java_package = "epam";
+option java_multiple_files = true;
+
+service PingPongServer {
+  rpc pingPong(PingRequest) returns (PongResponse);
+}
+
+message PingRequest {
+  string message = 1;
+}
+
+message PongResponse {
+  string message = 1;
+}
